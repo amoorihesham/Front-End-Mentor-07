@@ -1,0 +1,114 @@
+/* Vars */
+:root {
+  --darkCyan: hsl(185, 75%, 39%);
+  --darkDesaturatedblue: hsl(229, 23%, 23%);
+  --darkGrayishblue: hsl(227, 10%, 46%);
+  --darkGray: hsl(0, 0%, 59%);
+  --fontFamily: "Kumbh Sans", sans-serif;
+}
+/* ************************************************************* */
+/* Global Rules */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 18px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--darkCyan);
+  background-image: url(../images/bg-pattern-top.svg),
+    url(../images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat no-repeat;
+  background-position: top -30vw right 53vw, bottom -40vw left 50vw;
+}
+/* ************************************************************* */
+.container {
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  text-align: center;
+  margin: 2rem;
+}
+.container .top-img img {
+  width: 100%;
+  height: 100%;
+}
+.card-info {
+  border-bottom: 1px solid rgb(223, 221, 221);
+}
+.card-info .profile-info img {
+  width: 100px;
+  border-radius: 50%;
+  margin-top: -50px;
+  border: 4px solid white;
+}
+.card-info .profile-info h1 {
+  font-family: var(--fontFamily);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--darkDesaturatedblue);
+  margin-bottom: 7px;
+  margin-top: 15px;
+}
+.card-info .profile-info h1 span {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: var(--fontFamily);
+  color: var(--darkGrayishblue);
+}
+.card-info .profile-info p {
+  color: var(--darkGrayishblue);
+  font-family: var(--fontFamily);
+  font-weight: 400;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+.social-box {
+  padding: 30px 40px 30px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.social-box .sub-box .num {
+  color: var(--darkDesaturatedblue);
+  font-family: var(--fontFamily);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+.social-box .sub-box .p-sub {
+  font-family: var(--fontFamily);
+  font-weight: 400;
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  color: var(--darkGray);
+}
+/* Responsive Body BG [Cool isn't it] */
+@media (max-width: 1150px) {
+  body {
+    background-position: top -47vw right 55vw, bottom -59vw left 52vw;
+  }
+}
+@media (max-width: 375px) {
+  body {
+    background-position: top -144vw right 51vw, bottom -160vw left 38vw;
+  }
+}
+@media (max-width: 375px) {
+  .social-box {
+    padding: 30px;
+  }
+  .social-box div:nth-of-type(2) {
+    margin: 0 10px;
+  }
+}
